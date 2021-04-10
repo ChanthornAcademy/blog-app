@@ -9,7 +9,7 @@ class UserController extends Controller
     public function index(){
         return view('users.index');
     }
-    public function show($id){
+    public function show($id,$id2 = null, $id3 = null){
 
     //   return view('users.show',['userId'=>$id]);
     // return view('users.show')->with(['userId'=>$id,'data'=>$data]);

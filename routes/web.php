@@ -21,5 +21,9 @@ Route::get('/', function () {
 //     return 'user';
 // });
 Route::get('/user',[UserController::class,'index']);
-Route::get('user/{id}',[UserController::class,'show']);
+Route::get('user/{id}/{id2?}/{id3?}',[UserController::class,'show']);
 // Route::get('users/{id?}',[UserController::class,'show']);
+
+Route::get('/person/{id}', function ($id) {
+    return $id;
+})->where('id', '[0-9]+');
